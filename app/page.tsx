@@ -95,6 +95,7 @@ export default function Home() {
             height='1000'
             alt=''
             className='absolute bottom-0'
+            priority
           />
         </div>
 
@@ -156,6 +157,7 @@ export default function Home() {
                 width='200'
                 alt={partner}
                 className='w'
+                priority
               />
             );
           })}
@@ -171,6 +173,7 @@ export default function Home() {
             width='500'
             alt='man and woman smiling'
             className='z-20'
+            priority
           />
 
           <div className=''>
@@ -261,6 +264,7 @@ export default function Home() {
               height='1000'
               width='1000'
               alt='mockup two'
+              priority
             />
           </div>
         </div>
@@ -310,12 +314,14 @@ export default function Home() {
                 height='500'
                 width='500'
                 alt='customer agent'
+                priority
               />
               <Image
                 src='/customer-agent-two.svg'
                 height='500'
                 width='500'
                 alt='customer agent'
+                priority
               />
             </div>
 
@@ -413,6 +419,7 @@ export default function Home() {
               height='500'
               width='500'
               alt='customer agent'
+              priority
             />
           </div>
 
