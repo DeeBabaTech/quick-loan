@@ -64,17 +64,17 @@ export default function Home() {
           </div>
 
           {/* Hero */}
-          <div className='px-14'>
+          <div className='px-14 w-5/6'>
             <div className='text-base border border-primary px-5 py-2 text-primary rounded-full w-fit mb-5'>
               Quick Loans
             </div>
-            <div className='text-6xl font-bold w-5/6'>
-              <BoxReveal boxColor={"#003bf2"} duration={0.5}>
+            <BoxReveal boxColor={"#003bf2"} duration={0.5}>
+              <div className='text-6xl font-bold'>
                 Easy And <span className='text-primary'>Accessible</span> Loans
                 To Empower Your Ambitions
-              </BoxReveal>
-            </div>
-            <div className='text-subtext w-3/4 my-4'>
+              </div>
+            </BoxReveal>
+            <div className='text-subtext w-4/5 my-4'>
               <TextAnimate animation='blurInUp'>
                 Quickloan manages all loan administration and application
                 procedures, as well as regulatory compliance.
@@ -489,7 +489,7 @@ export default function Home() {
 
           <div className=''>
             <h1 className='text-primary mb-4 font-semibold'>NEWSLETTER</h1>
-            <div className='flex flex-col gap-2'>
+            <div className='flex flex-col gap-1'>
               <p className='text-subtext'> Over 25000 people have subscribed</p>
 
               <div className='relative text-base'>
