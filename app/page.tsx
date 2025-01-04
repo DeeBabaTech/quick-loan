@@ -24,6 +24,7 @@ import { motion } from "framer-motion";
 import { socials } from "@/components/socials";
 import BoxReveal from "@/components/ui/box-reveal";
 import { TextAnimate } from "@/components/ui/text-animate";
+import DrawerNav from "@/components/ui/drawer";
 
 export default function Home() {
   const [category, setCategory] = useState("Features");
@@ -42,10 +43,10 @@ export default function Home() {
 
   return (
     <>
-      <div className='flex relative h-screen max-h-[50rem]'>
-        <div className='py-5 w-3/4'>
+      <div className='md:flex relative md:h-screen max-h-[50rem]'>
+        <div className='md:py-5 py-3 md:w-3/4'>
           {/* Navbar */}
-          <div className='flex items-center gap-20 mb-12 px-14'>
+          <div className='flex items-center justify-between md:justify-start md:gap-20 mb-12 md:px-14 px-5'>
             <Image
               src='/quick-logo.svg'
               height='100'
@@ -53,7 +54,7 @@ export default function Home() {
               alt='Quick Loan logo'
               priority
             />
-            <ul className='flex items-center text-sm gap-5 bg-slate-100 rounded-full p-2'>
+            <ul className='hidden md:flex items-center text-sm gap-5 bg-slate-100 rounded-full p-2'>
               <li className='bg-primary text-white px-2 py-1 rounded-full'>
                 Homepage
               </li>
@@ -61,26 +62,32 @@ export default function Home() {
               <li>Our Features</li>
               <li>Contact us</li>
             </ul>
+
+            <button className='md:hidden text-sm bg-black text-white px-5 py-2 rounded-full'>
+              Download App
+            </button>
+
+            <DrawerNav />
           </div>
 
           {/* Hero */}
-          <div className='px-14 w-5/6'>
-            <div className='text-base border border-primary px-5 py-2 text-primary rounded-full w-fit mb-5'>
+          <div className='md:px-14 px-5 md:w-5/6 text-center md:text-start'>
+            <div className='md:text-base text-sm border border-primary px-5 py-2 text-primary rounded-full w-fit mx-auto md:mx-0 mb-5'>
               Quick Loans
             </div>
             <BoxReveal boxColor={"#003bf2"} duration={0.5}>
-              <div className='text-6xl font-bold'>
+              <div className='md:text-6xl text-3xl font-bold'>
                 Easy And <span className='text-primary'>Accessible</span> Loans
                 To Empower Your Ambitions
               </div>
             </BoxReveal>
-            <div className='text-subtext w-4/5 my-4'>
+            <div className='text-subtext md:w-4/5 md:my-4 my-5'>
               <TextAnimate animation='blurInUp'>
                 Quickloan manages all loan administration and application
                 procedures, as well as regulatory compliance.
               </TextAnimate>
             </div>
-            <div className='flex gap-5 text-base'>
+            <div className='flex justify-center md:justify-start gap-5 text-base mb-20 md:mb-0'>
               <div className='bg-primary px-5 py-2 text-white rounded-full w-fit'>
                 Get a loan
               </div>
@@ -100,7 +107,7 @@ export default function Home() {
         </div>
 
         {/* Testimonials Mockup */}
-        <div className='relative rounded-xl w-1/3 bg-gradient-to-br from-primary via-primary to-slate-100'>
+        <div className='hidden md:block relative rounded-xl w-1/3 bg-gradient-to-br from-primary via-primary to-slate-100'>
           <div className='absolute bottom-0 -left-[15rem] w-fit h-fit'>
             <Image
               src='/mockup.svg'
@@ -146,44 +153,46 @@ export default function Home() {
       </div>
 
       {/* Partners */}
-      <div className='py-5 px-10'>
-        <div className='text-center text-primary text-4xl my-5'>
+      <div className='pt-5 md:pt-3'>
+        <div className='text-center text-primary md:text-4xl text-3xl md:my-5 my-3'>
           Our Partners
         </div>
-        <div className='w-full flex justify-between'>
-          {partners.map((partner, index) => {
-            return (
-              <Image
-                key={index}
-                src={partner}
-                height='200'
-                width='200'
-                alt={partner}
-                className='w'
-                priority
-              />
-            );
-          })}
+        <div className='flex'>
+          <Marquee className='[--duration:30s]'>
+            {partners.map((partner, index) => {
+              return (
+                <Image
+                  key={index}
+                  src={partner}
+                  height='200'
+                  width='200'
+                  alt={partner}
+                  className='w-40 md:w-60'
+                  priority
+                />
+              );
+            })}
+          </Marquee>
         </div>
       </div>
 
       {/* How to. */}
       <div className='relative'>
-        <div className='flex items-center gap-8 px-14 my-20'>
+        <div className='md:flex items-center gap-8 md:px-14 px-5 md:mt-14 mt-10 mb-20'>
           <Image
             src='/man-woman.svg'
             height='800'
             width='500'
             alt='man and woman smiling'
-            className='z-20'
+            className='z-20 mb-5 md:mb-0'
             priority
           />
 
           <div className=''>
-            <h2 className='text-4xl font-semibold mb-1'>
+            <h2 className='md:ml-5 md:text-4xl text-3xl font-semibold mb-1'>
               How To Get Loan on QuickLoan
             </h2>
-            <div className='text-subtext text-xl'>
+            <div className='md:ml-5 text-subtext md:text-xl'>
               We provide the best loans to help develop your business.
             </div>
             <Items
