@@ -13,7 +13,7 @@ export default function Testimonial({
   testimonial: Testimony;
 }) {
   return (
-    <div className='bg-zinc-100 w-96 py-4 px-5 rounded-md text-base flex flex-col justify-between'>
+    <div className='bg-zinc-100 md:w-96 w-72 py-4 px-5 rounded-md text-base flex flex-col justify-between'>
       <h1 className='text-subtext font-medium'>TRUSTED CUSTOMER</h1>
       <p className='text-zinc-700 mt-3 font-medium'>
         "{testimonial.testimony}"

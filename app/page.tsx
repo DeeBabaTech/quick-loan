@@ -178,13 +178,13 @@ export default function Home() {
 
       {/* How to. */}
       <div className='relative'>
-        <div className='md:flex items-center gap-8 md:px-14 px-5 md:mt-14 mt-10 mb-20'>
+        <div className='md:flex items-center gap-8 md:px-14 px-5 md:mt-14 my-10 md:mb-20'>
           <Image
             src='/man-woman.svg'
             height='800'
             width='500'
             alt='man and woman smiling'
-            className='z-20 mb-5 md:mb-0'
+            className='z-20 mb-5 md:mb-0 w-full md:w-[45%]'
             priority
           />
 
@@ -217,15 +217,15 @@ export default function Home() {
           height='850'
           width='750'
           alt='twirl'
-          className='-mt-[30rem] z-10'
+          className='md:-mt-[30rem] hidden md:block z-10'
         />
       </div>
 
       {/* Application Process */}
       <div className='bg-[#EEEEF0]'>
-        <div className='flex items-center px-20 py-10'>
-          <div className='w-3/5'>
-            <div className='text-subtext text-4xl font-thin'>
+        <div className='flex flex-col-reverse md:flex-row items-center md:px-20 p-5 md:py-10'>
+          <div className='md:w-3/5'>
+            <div className='text-subtext md:text-4xl text-3xl font-thin'>
               Simplify loan applications by creating{" "}
               <span className='font-semibold text-foreground'>
                 simple application process.
@@ -270,7 +270,7 @@ export default function Home() {
               See details
             </div>
           </div>
-          <div className='w-5/12'>
+          <div className='md:w-5/12 -ml-5 mr-5 mb-5 md:mb-0'>
             <Image
               src='/mockup-two.svg'
               height='1000'
@@ -292,7 +292,7 @@ export default function Home() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className='relative flex flex-col gap-4 items-center justify-center px-4'>
+          className='relative flex flex-col gap-4 items-center justify-center px-5'>
           <div className='flex flex-col gap-3 items-center justify-center py-10'>
             <Image
               src='/loan-icon.svg'
@@ -300,7 +300,7 @@ export default function Home() {
               width='100'
               alt='loan logo'
             />
-            <div className='font-bold text-5xl leading-snug w-1/2 text-center'>
+            <div className='font-bold md:text-5xl text-3xl leading-snug md:w-1/2 text-center'>
               Start Processing Your Financial Potential Today
             </div>
             <div className='text-base bg-primary px-5 py-2 mt-5 text-white rounded-full w-fit'>
@@ -312,20 +312,21 @@ export default function Home() {
 
       {/* FAQs */}
       <div className='bg-[#F5F7FE]'>
-        <div className='px-20 py-10'>
-          <div className='text-center text-4xl w-2/4 mx-auto mb-10 font-medium'>
+        <div className='md:px-20 px-5 py-10'>
+          <div className='text-center md:text-4xl text-2xl md:w-2/4 mx-auto mb-10 font-medium'>
             Providing Fast Loan{" "}
             <span className='text-subtext font-thin'>
               Solutions to Empower Industries{" "}
             </span>
           </div>
-          <div className='flex gap-5'>
-            <div className='w-2/5'>
+          <div className='md:flex gap-5'>
+            <div className='md:w-2/5 mb-5 md:mb-0'>
               <Image
                 src='/customer-agent.svg'
                 height='500'
                 width='500'
                 alt='customer agent'
+                className='w-full'
                 priority
               />
               <Image
@@ -333,17 +334,18 @@ export default function Home() {
                 height='500'
                 width='500'
                 alt='customer agent'
+                className='w-full'
                 priority
               />
             </div>
 
-            <div className='w-3/5 text-base'>
+            <div className='md:w-3/5 md:text-base text-[0.65rem]'>
               <div className='w-full flex justify-between items-center'>
                 {faqsCategory.map((faq, index) => {
                   return (
                     <div
                       key={index}
-                      className={`h-16 rounded-t-3xl p-2 ${
+                      className={`md:h-16 h-12 rounded-t-3xl p-2 ${
                         faq === category ? "bg-white" : "rounded-b-2xl"
                       }`}>
                       <div
@@ -351,7 +353,7 @@ export default function Home() {
                           faq === category
                             ? "bg-primary text-white"
                             : "bg-white"
-                        }  px-5 py-1 rounded-full cursor-pointer`}
+                        }  md:px-5 px-2 py-1 rounded-full cursor-pointer`}
                         onClick={() => handleCategory(faq)}>
                         {faq}
                       </div>
@@ -385,12 +387,12 @@ export default function Home() {
       </div>
 
       {/* Testimonials */}
-      <div className='px-20 py-10'>
-        <div className='flex justify-between items-center mb-10'>
-          <h1 className='text-3xl font-semibold w-1/3'>
+      <div className='md:px-20 py-10'>
+        <div className='md:flex px-5 md:px-0 justify-between items-center mb-10'>
+          <h1 className='text-3xl font-semibold md:w-1/3 text-center md:text-start'>
             Customer words about their experiences
           </h1>
-          <p className='w-1/3 text-subtext'>
+          <p className='md:w-1/3 text-subtext text-center md:text-start mt-3 md:mt-0'>
             We help to keep track of your expenses and incomes. it show
           </p>
         </div>
@@ -406,10 +408,10 @@ export default function Home() {
       </div>
 
       {/* FAQs Two */}
-      <div className='px-16 py-10'>
-        <div className='flex flex-row-reverse gap-10'>
-          <div className='w-1/2 text-sm'>
-            <div className='w-full flex items-center gap-5 mb-3'>
+      <div className='md:px-16 p-5 md:py-10'>
+        <div className='flex md:flex-row-reverse flex-col-reverse gap-10'>
+          <div className='md:w-1/2 md:text-sm text-xs'>
+            <div className='w-full flex items-center md:gap-5 gap-3 mb-3'>
               {faqsSecondCategory.map((faq, index) => {
                 return (
                   <div key={index}>
@@ -431,11 +433,12 @@ export default function Home() {
               height='500'
               width='500'
               alt='customer agent'
+              className="w-full"
               priority
             />
           </div>
 
-          <div className='w-1/2 text-base'>
+          <div className='md:w-1/2 text-base'>
             <div className='text-3xl mx-auto font-medium'>
               Frequently Asked Questions
             </div>
@@ -455,7 +458,7 @@ export default function Home() {
                     value={`faq ${index}`}
                     className={`${index === 0 && "border-t"} ${
                       index !== filteredFaqsTwo.length - 1 && "border-b"
-                    } py-1`}>
+                    } md:py-1`}>
                     <AccordionTrigger>{faq.question}</AccordionTrigger>
                     <AccordionContent className='text-subtext'>
                       {faq.response}
@@ -469,17 +472,18 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <div className='bg-footer p-16 text-white'>
-        <div className='flex justify-between'>
-          <div className='w-1/4'>
+      <div className='bg-footer md:p-16 p-5 text-white'>
+        <div className='flex flex-wrap gap-y-5 md:gap-y-0 justify-between'>
+          <div className='md:w-1/4 w-full md:text-start text-center'>
             <Image
               src='/quick-logo.svg'
               height='100'
               width='90'
               alt='Quick Loan logo'
+              className="mx-auto md:mx-0"
               priority
             />
-            <p className='mt-5'>
+            <p className='mt-5 mx-auto md:mx-0'>
               Quickloan manages all loan administration and application
               procedures, as well as regulatory compliance.
             </p>
@@ -508,7 +512,7 @@ export default function Home() {
 
           <div className=''>
             <h1 className='text-primary mb-4 font-semibold'>NEWSLETTER</h1>
-            <div className='flex flex-col gap-1'>
+            <div className='flex flex-col gap-2'>
               <p className='text-subtext'> Over 25000 people have subscribed</p>
 
               <div className='relative text-base'>
@@ -528,9 +532,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className='w-11/12 mx-auto'>
+        <div className='md:w-11/12 mx-auto'>
           <div className='mt-10 mb-2 h-0.5 w-full bg-subtext' />
-          <div className='flex justify-between items-center'>
+          <div className='flex flex-col md:flex-row gap-y-2 md:gap-y-0 justify-between items-center'>
             <div className='flex gap-2'>
               <p>Privacy & Terms</p>
               <p>Contact Us</p>

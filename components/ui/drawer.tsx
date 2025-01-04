@@ -16,19 +16,15 @@ export default function DrawerNav() {
   const navList = [
     {
       id: "/",
-      nav: "Home",
-    },
-    {
-      id: "about",
-      nav: "About",
+      nav: "Homepage",
     },
     {
       id: "services",
       nav: "Services",
     },
     {
-      id: "projects",
-      nav: "Projects",
+      id: "our-feature",
+      nav: "Our Features",
     },
     {
       id: "contact",
@@ -38,13 +34,13 @@ export default function DrawerNav() {
 
   const DrawerList = (
     <div
-      className='p-16 text-center h-screen bg-primary text-white'
+      className='p-16 px-22 text-center h-screen bg-primary text-white'
       role='presentation'
       onClick={toggleDrawer(false)}>
       <List>
         {navList.map((text) => (
           <div key={text.id} className='my-10 text-center text-lg'>
-            <Link href={text.id === "/" ? "/" : `#${text.id}`}>{text.nav}</Link>
+            <Link href='/'>{text.nav}</Link>
           </div>
         ))}
       </List>
