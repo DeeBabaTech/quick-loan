@@ -42,7 +42,7 @@ export default function Home() {
 
   return (
     <>
-      <div className='flex relative h-screen'>
+      <div className='flex relative h-screen max-h-[50rem]'>
         <div className='py-5 w-3/4'>
           {/* Navbar */}
           <div className='flex items-center gap-20 mb-12 px-14'>
@@ -139,6 +139,9 @@ export default function Home() {
               className='absolute bottom-10 -left-10'
             />
           </div>
+          <button className='text-base bg-black text-white px-7 py-2 rounded-full absolute top-5 right-10'>
+            Download App
+          </button>
         </div>
       </div>
 
