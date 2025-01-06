@@ -46,7 +46,7 @@ export default function Home() {
       <div className='md:flex relative md:h-screen max-h-[50rem]'>
         <div className='md:py-5 py-3 md:w-3/4'>
           {/* Navbar */}
-          <div className='flex items-center justify-between md:justify-start md:gap-20 mb-12 md:px-14 px-5'>
+          <div className='flex items-center justify-between md:justify-start md:gap-20 md:mb-12 mb-7 md:px-14 px-5'>
             <Image
               src='/quick-logo.svg'
               height='100'
@@ -72,7 +72,7 @@ export default function Home() {
 
           {/* Hero */}
           <div className='md:px-14 px-5 md:w-5/6 text-center md:text-start'>
-            <div className='md:text-base text-sm border border-primary px-5 py-2 text-primary rounded-full w-fit mx-auto md:mx-0 mb-5'>
+            <div className='md:text-base text-sm border border-primary px-5 py-1 text-primary rounded-full w-fit mx-auto md:mx-0 mb-5'>
               Quick Loans
             </div>
             <BoxReveal boxColor={"#003bf2"} duration={0.5}>
@@ -87,11 +87,11 @@ export default function Home() {
                 procedures, as well as regulatory compliance.
               </TextAnimate>
             </div>
-            <div className='flex justify-center md:justify-start gap-5 text-base mb-20 md:mb-0'>
-              <div className='bg-primary px-5 py-2 text-white rounded-full w-fit'>
+            <div className='flex justify-center md:justify-start gap-2.5 md:gap-5 text-base mb-20 md:mb-0'>
+              <div className='bg-primary px-3.5 md:px-5 py-2 text-white rounded-full w-fit'>
                 Get a loan
               </div>
-              <div className='border border-primary px-3 py-2 text-primary rounded-full w-fit'>
+              <div className='border border-primary px-3.5 py-2 text-primary rounded-full w-fit'>
                 Become a loan vendor
               </div>
             </div>
@@ -154,7 +154,7 @@ export default function Home() {
 
       {/* Partners */}
       <div className='pt-5 md:pt-3'>
-        <div className='text-center text-primary md:text-4xl text-3xl md:my-5 my-3'>
+        <div className='text-center text-primary font-medium md:text-4xl text-3xl md:my-5 my-2'>
           Our Partners
         </div>
         <div className='flex'>
@@ -339,13 +339,13 @@ export default function Home() {
               />
             </div>
 
-            <div className='md:w-3/5 md:text-base text-[0.65rem]'>
+            <div className='md:w-3/5 md:text-base text-[0.6rem]'>
               <div className='w-full flex justify-between items-center'>
                 {faqsCategory.map((faq, index) => {
                   return (
                     <div
                       key={index}
-                      className={`md:h-16 h-12 rounded-t-3xl p-2 ${
+                      className={`md:h-16 h-12 rounded-t-2xl md:rounded-t-3xl p-1 md:p-2 ${
                         faq === category ? "bg-white" : "rounded-b-2xl"
                       }`}>
                       <div
@@ -410,8 +410,8 @@ export default function Home() {
       {/* FAQs Two */}
       <div className='md:px-16 p-5 md:py-10'>
         <div className='flex md:flex-row-reverse flex-col-reverse gap-10'>
-          <div className='md:w-1/2 md:text-sm text-xs'>
-            <div className='w-full flex items-center md:gap-5 gap-3 mb-3'>
+          <div className='md:w-1/2 md:text-sm text-[0.7rem]'>
+            <div className='w-full flex items-center md:gap-5 gap-2 mb-3'>
               {faqsSecondCategory.map((faq, index) => {
                 return (
                   <div key={index}>
