@@ -225,7 +225,7 @@ export default function Home() {
       <div className='bg-[#EEEEF0]'>
         <div className='flex flex-col-reverse md:flex-row items-center md:px-20 p-5 md:py-10'>
           <div className='md:w-3/5'>
-            <div className='text-subtext md:text-4xl text-3xl font-thin'>
+            <div className='text-subtext md:text-4xl text-2xl font-thin'>
               Simplify loan applications by creating{" "}
               <span className='font-semibold text-foreground'>
                 simple application process.
@@ -312,14 +312,14 @@ export default function Home() {
 
       {/* FAQs */}
       <div className='bg-[#F5F7FE]'>
-        <div className='md:px-20 px-5 py-10'>
-          <div className='text-center md:text-4xl text-2xl md:w-2/4 mx-auto mb-10 font-medium'>
+        <div className='md:px-20 py-10'>
+          <div className='text-center px-3 md:px-0 md:text-4xl text-2xl md:w-2/4 mx-auto mb-10 font-medium'>
             Providing Fast Loan{" "}
             <span className='text-subtext font-thin'>
               Solutions to Empower Industries{" "}
             </span>
           </div>
-          <div className='md:flex gap-5'>
+          <div className='md:flex gap-5 px-5 md:px-0'>
             <div className='md:w-2/5 mb-5 md:mb-0'>
               <Image
                 src='/customer-agent.svg'
@@ -388,7 +388,7 @@ export default function Home() {
 
       {/* Testimonials */}
       <div className='md:px-20 py-10'>
-        <div className='md:flex px-5 md:px-0 justify-between items-center mb-10'>
+        <div className='md:flex px-3 md:px-0 justify-between items-center mb-10'>
           <h1 className='text-3xl font-semibold md:w-1/3 text-center md:text-start'>
             Customer words about their experiences
           </h1>
